@@ -9,5 +9,4 @@ public class JxauCommunityApplication {
     public static void main(String[] args) {
         SpringApplication.run(JxauCommunityApplication.class, args);
     }
-
 }
