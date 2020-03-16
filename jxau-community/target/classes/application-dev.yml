@@ -1,13 +1,23 @@
 server:
   port: 8080
+  tomcat:
+    uri-encoding: UTF-8
 
+
+###thymeleaf配置
 spring:
+  thymeleaf:
+#    prefix: classpath:/templates/
+    #cache: false
+#    prefix: classpath:templates/
+#    suffix: .html
   datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/jaxu?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    driver-class-name: com.mysql.cj.jdbc.Driver
+   username: root
+   password: 123456
+   url: jdbc:mysql://localhost:3306/jaxu?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+   driver-class-name: com.mysql.cj.jdbc.Driver
 
+#mybatis配置文件
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.liudegui.entity
@@ -16,5 +26,7 @@ mybatis:
 logging:
   level:
     com:
-      example:
+      liudegui:
         mapper : debug
+#springmvc
+
