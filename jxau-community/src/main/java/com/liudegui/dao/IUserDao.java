@@ -1,9 +1,10 @@
 package com.liudegui.dao;
 
 import com.liudegui.entity.User;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
+@Repository
 public interface IUserDao {
-    List<User> findAll();
+    User selUser(String username,String password);
+    User selUser1info(String userId);
 }
