@@ -12,32 +12,33 @@
     <script src="assets/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <table class="table table-hover" >
+    <div th:include="header :: header"></div>
+    <table class="table table-hover" align="center" width="300px">
         <tr>
-            <td>用户名</td>
-<!--            <td th:text="${info.stud_id}"></td>-->
+            <td>用户名：</td>
+            <td th:text="${info.stud_id}"></td>
         </tr>
         <tr>
-            <td>姓名</td>
-<!--            <td th:text="${info.stud_name}"></td>-->
+            <td>姓&nbsp;&nbsp;&nbsp;名：</td>
+            <td th:text="${info.stud_name}"></td>
         </tr>
         <tr>
-            <td>性别</td>
-<!--            <td th:text="${info.gender}"></td>-->
-        </tr>
-
-        <tr>
-            <td>班级</td>
-<!--            <td th:text="${info.stud_class}"></td>-->
+            <td>性&nbsp;&nbsp;&nbsp;别：</td>
+            <td th:text="${info.stud_gender}"></td>
         </tr>
 
         <tr>
-            <td>地址</td>
-<!--            <td th:text="${info.stud_address}"></td>-->
+            <td>班&nbsp;&nbsp;&nbsp;级：</td>
+            <td th:text="${info.stud_class}"></td>
+        </tr>
+
+        <tr>
+            <td>地&nbsp;&nbsp;&nbsp;址：</td>
+            <td th:text="${info.stud_address}"></td>
         </tr>
         <tr>
-            <td>座右铭</td>
-<!--            <td th:text="${info.stud_motto}"></td>-->
+            <td>座右铭：</td>
+            <td th:text="${info.stud_motto}"></td>
         </tr>
     </table>
 </body>

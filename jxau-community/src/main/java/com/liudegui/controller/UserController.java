@@ -51,12 +51,13 @@ public class UserController {
     }
 
     @RequestMapping("/userInfo")
-    public String catInfo(Model model,Map<String,Object> map){
+    public String catInfo(Model model,Map<String,Object> map,HttpSession session){
         User userInfo = userService.catUser("liudegui");
         map.put("person",userInfo);
         map.put("status","200");
         map.put("result","success");
         model.addAttribute("info",userInfo);
+        session.setAttribute("user", userInfo.getStud_name());
         return "person";
     }
 
