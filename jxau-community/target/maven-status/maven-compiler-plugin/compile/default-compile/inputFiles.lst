@@ -1,3 +1,10 @@
-E:\project\jxau-community\src\main\java\com\liudegui\jxaucommunity\JxauCommunityApplication.java
-E:\project\jxau-community\src\main\java\com\liudegui\jxaucommunity\ServletInitializer.java
+E:\project\jxau-community\src\main\java\com\liudegui\mapper\UserMapper.java
+E:\project\jxau-community\src\main\java\com\liudegui\ServletInitializer.java
+E:\project\jxau-community\src\main\java\com\liudegui\service\UserService.java
+E:\project\jxau-community\src\main\java\com\liudegui\dao\IUserDao.java
+E:\project\jxau-community\src\main\java\com\liudegui\JxauCommunityApplication.java
+E:\project\jxau-community\src\main\java\com\liudegui\controller\CampusImg.java
+E:\project\jxau-community\src\main\java\com\liudegui\config\MvcConfig.java
+E:\project\jxau-community\src\main\java\com\liudegui\controller\UpdatePassword.java
+E:\project\jxau-community\src\main\java\com\liudegui\entity\User.java
 E:\project\jxau-community\src\main\java\com\liudegui\controller\UserController.java

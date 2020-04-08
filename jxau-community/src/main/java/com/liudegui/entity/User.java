@@ -2,7 +2,7 @@ package com.liudegui.entity;
 
 public class User {
     private String stud_id;
-    private String stu_password;
+    private String stud_password;
     private String stud_image;
     private String stud_name ;
     private String stud_gender;
@@ -16,7 +16,7 @@ public class User {
 
     public User(String stud_id, String stu_password, String stud_image, String stud_name, String stud_gender, String stud_class, String stud_status, String stud_address, String stud_motto) {
         this.stud_id = stud_id;
-        this.stu_password = stu_password;
+        this.stud_password = stu_password;
         this.stud_image = stud_image;
         this.stud_name = stud_name;
         this.stud_gender = stud_gender;
@@ -25,12 +25,13 @@ public class User {
         this.stud_address = stud_address;
         this.stud_motto = stud_motto;
     }
-    public String getStu_password() {
-        return stu_password;
+
+    public String getStud_password() {
+        return stud_password;
     }
 
-    public void setStu_password(String stu_password) {
-        this.stu_password = stu_password;
+    public void setStud_password(String stud_password) {
+        this.stud_password = stud_password;
     }
 
     public String getStud_id() {

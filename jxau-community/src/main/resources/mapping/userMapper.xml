@@ -2,6 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liudegui.dao.IUserDao">
 
+    <sql id="user_columns">
+            stud_id,
+            stud_password,
+            stud_image,
+            stud_name,
+            stud_gender,
+            stud_class,
+            stud_status,
+            stud_address,
+            stud_motto
+    </sql>
 
     <select id="selUser" resultType="com.liudegui.entity.User">
         select
@@ -35,5 +46,12 @@
         where
             stud_id=#{userId}
     </select>
-
+    <select id="queryUserByName" parameterType="string" resultType="com.liudegui.entity.User">
+        SELECT
+        <include refid="user_columns"/>
+        from
+            user
+        where
+            stud_id = #{username}
+    </select>
 </mapper>
