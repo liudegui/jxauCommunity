@@ -9,19 +9,116 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script language="JavaScript" src="assets/js/jxau/publish.js"></script>
+    <script src="assets/js/jxau/comment.js"></script>
+    <style>
+        span {
+            border: 2px;
+            line-height:10px
+        }
+        hr{
+            color: #0f0f0f;
+        }
+    </style>
 </head>
 <body>
-    <div th:include="header :: header"></div>
-    <div class="container">
-        <div class="col-md-12">
+<div th:include="header :: header"></div>
+<div class="container">
+    <div class="col-md-12">
 
-            <textarea id="pd" name="pd" class="form-control" width="100px" algin="center" rows="5" placeholder="这一刻的想法..."></textarea>
+        <textarea id="content" name="content" class="form-control" width="100px" algin="center" rows="5"
+                  placeholder="这一刻的想法..."></textarea>
 
-            <p class="text-right">
-                <input class="btn btn-default " onclick="publishPd()" value="发布">
-            </p>
-
-        </div>
+        <p class="text-right">
+            <input class="btn btn-default " onclick="publishPd()" value="发布">
+        </p>
     </div>
+
+    <table style="border-collapse:separate; border-spacing:0px 10px; border:1px solid #000000;" width="60%" align="center">
+        <tr>
+            <td>
+             <span>
+                <font color="#191970" size="3px"><b>刘德归</b></font>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <font>2020-04-10 09:36:00</font>
+                <hr/>
+            </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>人把自己置身于忙碌之中，有一种麻木的踏实，但丧失了真实”。真实是什么？“你看到什么，做什么，听到什么，和谁在一起，如果有一种从心灵深处满溢出来的，不懊悔也不羞耻的平和与喜悦，那就是真实”。</p>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input style="width:92.95%;" id="pl" type="text" name="pl" maxlength="20">
+                <button onclick="comment()">评论</button>
+            </td>
+        </tr>
+        <tfoot>
+
+        <td >
+<!--            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <span><font><b>root</b></font><b> : </b></span>
+            <span style="align-items: start">刘德归666</span>
+            <br/>
+            <span><font><b>admin</b></font><b> : </b></span>
+            <span style="align-items: start">刘德归nb</span>
+<!--            <input id="hf" type="text" name="hf" maxlength="20" >-->
+<!--            <button onclick="">回复</button>-->
+        </td>
+<!--        <td align="right" style="width:30%;">-->
+<!--            -->
+<!--        </td>-->
+        </tfoot>
+
+    </table>
+    <hr color="green"/>
+
+
+    <table style="border-collapse:separate; border-spacing:0px 10px; border:1px solid #000000;" width="60%" align="center">
+        <tr>
+            <td>
+             <span>
+                <font color="#191970" size="3px"><b>江西农业大学社团</b></font>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <font>2020-04-10 11:11:00</font>
+                <hr/>
+            </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>社团招新啦</p>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input style="width:92.95%;" type="text" id="comment" maxlength="20" placeholder="学评论...">
+                <button onclick="comment()">评论</button>
+            </td>
+        </tr>
+        <tfoot>
+
+        <td >
+            <!--            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <span><font><b>unique</b></font><b> : </b></span>
+            <span style="align-items: start">英语协会招新</span>
+            <br/>
+            <span><font><b>admin</b></font><b> : </b></span>
+            <span style="align-items: start">志愿者协会招新</span>
+            <!--            <input id="hf" type="text" name="hf" maxlength="20" >-->
+            <!--            <button onclick="">回复</button>-->
+        </td>
+        <!--        <td align="right" style="width:30%;">-->
+        <!--            -->
+        <!--        </td>-->
+        </tfoot>
+
+    </table>
+    <hr color="green"/>
+</div>
 </body>
 </html>

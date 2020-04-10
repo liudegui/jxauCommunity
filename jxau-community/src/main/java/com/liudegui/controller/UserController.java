@@ -8,18 +8,11 @@ import com.liudegui.model.UserModel;
 import com.liudegui.service.UserService;
 import com.liudegui.utils.CookieUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
@@ -50,26 +43,24 @@ public class UserController {
         return messageModel;
     }
 
-    @RequestMapping("main")
+    @RequestMapping("/main")
     public String main(HttpServletRequest request,HttpSession session) throws
             UnsupportedEncodingException {
 /**
  * 从request中，获取cookie 得到userName,和trueName
  */
-        request.setAttribute("username", CookieUtil.getCookieValue(request,"username"));
-
         session.setAttribute("username",CookieUtil.getCookieValue(request,"username"));
         return "main";
     }
 
     @RequestMapping("/userInfo")
-    public String catInfo(Model model,Map<String,Object> map,HttpSession session){
-        User userInfo = userService.catUser("liudegui");
+    public String catInfo(Model model,Map<String,Object> map,HttpServletRequest request){
+        User userInfo = userService.catUser(CookieUtil.getCookieValue(request,"username"));
         map.put("person",userInfo);
         map.put("status","200");
         map.put("result","success");
         model.addAttribute("info",userInfo);
-        session.setAttribute("user", userInfo.getStud_name());
+        request.setAttribute("user", userInfo.getStud_name());
         return "person";
     }
 

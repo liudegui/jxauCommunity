@@ -2,11 +2,8 @@ package com.liudegui.service;
 
 import com.liudegui.dao.IUserDao;
 import com.liudegui.entity.User;
-import com.liudegui.mapper.UserMapper;
 import com.liudegui.model.UserModel;
 import com.liudegui.utils.AssertUtil;
-import com.liudegui.utils.Base64Util;
-import com.liudegui.utils.Md5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +15,7 @@ public class UserService {
         return userDao.selUser(username,password);
     }
     public User catUser(String userId){
-        return userDao.selUser1info(userId);
+        return userDao.selUserInfo(userId);
     }
 
     public UserModel userLogin(String username, String password) {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liudegui.dao.IDynamicDao">
+    <sql id="post_columns">
+            post_id,
+            post_content,
+            post_image,
+            post_date,
+            stud_id
+    </sql>
+    <insert id="insertPost" parameterType="com.liudegui.entity.Post">
+        insert into post(post_id,post_content,post_date,stud_id)
+        values
+            (#{postID},#{postContent},#{postDate},#{studID})
+    </insert>
+
+    <select id="selCount" resultType="int">
+        select count(*) from post
+    </select>
+
+
+</mapper>

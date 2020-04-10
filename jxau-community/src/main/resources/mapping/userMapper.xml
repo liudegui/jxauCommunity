@@ -30,7 +30,7 @@
         where
             stud_id = #{username} and stud_password=#{password}
     </select>
-    <select id="selUser1info" resultType="com.liudegui.entity.User">
+    <select id="selUserInfo" resultType="com.liudegui.entity.User">
         select
             stud_id,
             stud_password,

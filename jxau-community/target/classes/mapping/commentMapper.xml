@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liudegui.dao.ICommentDao">
+    <select id="selCount" resultType="int">
+        select count(*) from comment
+    </select>
+    <insert id="insertComment" parameterType="com.liudegui.entity.Comment">
+        insert into
+            comment(post_id,stud_id,comm_id,comm_content,comm_date)
+        values
+            (#{postID},#{studID},#{commID},#{commContent},#{commDate})
+    </insert>
+</mapper>

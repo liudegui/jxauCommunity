@@ -57,7 +57,7 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
                     messageModel.setMsg(exception.getMsg());
                     messageModel.setCode(exception.getCode());
                 }
-                httpServletResponse.setContentType("application/json;charset=uft-8");
+                httpServletResponse.setContentType("application/json;charset=utf-8");
                 httpServletResponse.setCharacterEncoding("utf-8");
                 PrintWriter printWriter = null;
                 try {

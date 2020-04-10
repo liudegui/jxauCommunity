@@ -1,10 +1,15 @@
 function publishPd() {
+    var content = $("#content").val();
+    if (content.length == 0) {
+        alert("请输入此刻想法...");
+        return;
+    }
     $.ajax({
         type: "POST",
         url: "/pulishPersonalDynamic",
         dataType: "json",
         data: {
-            name: $("#pd").val(),
+            content: $("#content").val(),
         },
         success:function (messageModel) {
             if(messageModel.code==200){

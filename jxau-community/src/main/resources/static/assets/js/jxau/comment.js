@@ -1,15 +1,15 @@
-function publishPd() {
-    var content = $("#content").val();
-    if (content.length == 0) {
-        alert("请输入此刻想法...");
+function comment() {
+    var comment = $("#comment").val();
+    if (comment.length == 0) {
+        alert("请输入你的评论...");
         return;
     }
     $.ajax({
         type: "POST",
-        url: "/pulishPersonalDynamic",
+        url: "/comment",
         dataType: "json",
         data: {
-            content: $("#content").val(),
+            comment: $("#comment").val(),
         },
         success:function (messageModel) {
             if(messageModel.code==200){
