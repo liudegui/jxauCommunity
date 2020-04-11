@@ -1,5 +1,5 @@
 function comment() {
-    var comment = $("#comment").val();
+    var comment = $(this).prev().val();
     if (comment.length == 0) {
         alert("请输入你的评论...");
         return;
@@ -9,7 +9,7 @@ function comment() {
         url: "/comment",
         dataType: "json",
         data: {
-            comment: $("#comment").val(),
+            comment: $(this).prev().val(),
         },
         success:function (messageModel) {
             if(messageModel.code==200){

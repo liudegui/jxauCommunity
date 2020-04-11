@@ -14,12 +14,7 @@ public class ResourcesService {
     IResourcesDao resourcesDao;
 
     public List<DynamicInfo> selAllInfo() {
-
-        DynamicInfo dynamicInfo = new DynamicInfo();
-
-        resourcesDao.selAllResources();
-
-
-        return null;
+        List<DynamicInfo> dynamicInfos = resourcesDao.selAllResources();
+        return dynamicInfos;
     }
 }

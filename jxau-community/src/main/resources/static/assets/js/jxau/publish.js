@@ -19,6 +19,8 @@ function publishPd() {
                 // $.cookie("userId",result.userId);
                 //window.location.href="pulishPersonalDynamic";
                 alert(messageModel.msg);
+                $("#content").innerHTML="";
+                location.reload();
             }else {
                 alert(messageModel.msg);
             }

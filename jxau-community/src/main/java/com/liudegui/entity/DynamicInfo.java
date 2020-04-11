@@ -5,7 +5,7 @@ import java.util.List;
 
 @Data
 public class DynamicInfo {
-    private String studName;
+    private String studID;
     private String postID;
     private String PostDate;
     private String PostContent;

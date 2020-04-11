@@ -23,7 +23,7 @@ function userLogin() {
         success: function (messageModel) {
             if (messageModel.code == 200) {
                 var result = messageModel.result;
-                $.cookie("username", result.userName,{ expires: 7, path: '/' });
+                $.cookie("username", result.userName,{path: '/' });
                 //$.cookie("userId",result.userId);
                 window.location.href = "main";
             } else {

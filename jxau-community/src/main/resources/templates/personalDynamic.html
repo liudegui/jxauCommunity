@@ -11,6 +11,11 @@
     <script language="JavaScript" src="assets/js/jxau/publish.js"></script>
     <script src="assets/js/jxau/comment.js"></script>
     <script src="assets/js/jxau/loadResources.js"></script>
+    <script>
+        $(document).ready(function(){
+            loading();
+        });
+    </script>
     <style>
         span {
             border: 2px;
@@ -34,6 +39,21 @@
         </p>
     </div>
 
+
+
+
+    <div id="showData">
+
+    </div>
+
+
+
+
+
+
+
+
+
     <table style="border-collapse:separate; border-spacing:0px 10px; border:1px solid #000000;" width="60%" align="center">
         <tr>
             <td>
@@ -53,7 +73,7 @@
         </tr>
         <tr>
             <td>
-                <input style="width:92.95%;" id="pl" type="text" name="pl" maxlength="20">
+                <input style="width:90%;" id="pl" type="text" name="pl" maxlength="20">
                 <button onclick="comment()">评论</button>
             </td>
         </tr>
@@ -97,7 +117,7 @@
         </tr>
         <tr>
             <td>
-                <input style="width:92.95%;" type="text" id="comment" maxlength="20" placeholder="学评论...">
+                <input style="width:90%;" type="text" id="comment" maxlength="20" placeholder="写评论...">
                 <button onclick="comment()">评论</button>
             </td>
         </tr>

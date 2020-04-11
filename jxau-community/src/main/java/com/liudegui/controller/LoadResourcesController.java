@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -17,10 +20,13 @@ public class LoadResourcesController {
 
     @RequestMapping("/loadResources")
     @ResponseBody
-    public List loadResources(){
-
+    public Map<String,Object> loadResources(){
         List<DynamicInfo> dynamicInfos = resourcesService.selAllInfo();
-        return dynamicInfos;
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 200);
+        map.put("msg", "成功");
+        map.put("data", dynamicInfos);
+        return map;
 
     }
 }
