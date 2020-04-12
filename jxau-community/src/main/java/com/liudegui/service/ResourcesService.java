@@ -17,4 +17,12 @@ public class ResourcesService {
         List<DynamicInfo> dynamicInfos = resourcesDao.selAllResources();
         return dynamicInfos;
     }
+    public List<DynamicInfo> selAllPersonalInfo() {
+        List<DynamicInfo> dynamicInfos = resourcesDao.selAllPersonalInfo();
+        return dynamicInfos;
+    }
+    public List<DynamicInfo> selAllCommunityInfo() {
+        List<DynamicInfo> dynamicInfos = resourcesDao.selAllCommunityInfo();
+        return dynamicInfos;
+    }
 }

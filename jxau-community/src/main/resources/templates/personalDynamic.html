@@ -10,7 +10,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script language="JavaScript" src="assets/js/jxau/publish.js"></script>
     <script src="assets/js/jxau/comment.js"></script>
-    <script src="assets/js/jxau/loadResources.js"></script>
+    <script src="assets/js/jxau/loadPersonalResources.js"></script>
     <script>
         $(document).ready(function () {
             loading();
@@ -34,19 +34,13 @@
     </style>
 </head>
 <body>
+
 <div th:include="header :: header"></div>
 <div class="container">
-    <div class="col-md-12">
-
-        <textarea id="content" name="content" class="form-control" width="100px" algin="center" rows="5"
-                  placeholder="这一刻的想法..."></textarea>
-
-        <p class="text-right">
-            <input class="btn btn-default " onclick="publishPd()" value="发布">
-        </p>
+    <div style="margin-bottom:5px;height:72px;background: url('assets/img/ad.gif')" class="col-md-12">
+<!--        <img align="center" src="assets/img/ad.gif" alt="网络延迟..."/>-->
     </div>
-
-
+    <!--    展示数据-->
     <div id="showData"></div>
 </div>
 </body>

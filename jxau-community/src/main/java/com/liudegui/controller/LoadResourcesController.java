@@ -27,6 +27,27 @@ public class LoadResourcesController {
         map.put("msg", "成功");
         map.put("data", dynamicInfos);
         return map;
+    }
 
+    @RequestMapping("/loadPersonalResources")
+    @ResponseBody
+    public Map<String,Object> loadPersonalResources(){
+        List<DynamicInfo> dynamicInfos = resourcesService.selAllPersonalInfo();
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 200);
+        map.put("msg", "成功");
+        map.put("data", dynamicInfos);
+        return map;
+    }
+
+    @RequestMapping("/loadCommunityResources")
+    @ResponseBody
+    public Map<String,Object> loadCommunityResources(){
+        List<DynamicInfo> dynamicInfos = resourcesService.selAllCommunityInfo();
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 200);
+        map.put("msg", "成功");
+        map.put("data", dynamicInfos);
+        return map;
     }
 }

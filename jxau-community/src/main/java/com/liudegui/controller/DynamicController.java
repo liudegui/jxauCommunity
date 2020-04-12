@@ -30,7 +30,9 @@ public class DynamicController {
         map.put("data", "------");
         return map;
     }
-
-
+    @RequestMapping("/communityDynamic")
+    public String communityDynamic() {
+        return "communityDynamic";
+    }
 
 }

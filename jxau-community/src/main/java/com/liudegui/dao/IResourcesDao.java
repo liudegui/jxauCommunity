@@ -9,4 +9,7 @@ import java.util.List;
 public interface IResourcesDao {
 
     List<DynamicInfo> selAllResources();
+    List<DynamicInfo> selAllPersonalInfo();
+    List<DynamicInfo> selAllCommunityInfo();
+
 }
