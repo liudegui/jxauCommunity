@@ -3,7 +3,7 @@
 <mapper namespace="com.liudegui.dao.IResourcesDao">
 
     <resultMap id="BaseResultMap" type="com.liudegui.entity.DynamicInfo" >
-        <result column="stud_id" property="studID" jdbcType="VARCHAR" />
+        <result column="postName" property="studID" jdbcType="VARCHAR" />
         <result column="post_id" property="postID" jdbcType="VARCHAR" />
         <result column="post_date" property="PostDate" jdbcType="VARCHAR"/>
         <result column="post_content" property="PostContent" jdbcType="INTEGER" />
@@ -11,7 +11,8 @@
             <result column="comm_id" property="commID"/>
             <result column="comm_content" property="commContent"/>
             <result column="comm_date" property="commDate"/>
-            <result column="stud_id" property="studID"/>
+            <result column="commentName" property="studID"/>
+            <result column="post_id" property="postID"/>
         </collection>
     
     </resultMap>
@@ -19,14 +20,14 @@
 
     <select id="selAllResources" resultMap="BaseResultMap">
         SELECT
-	        a.stud_id,
+	        a.stud_id postName,
 	        a.post_id,
 	        a.post_date,
 	        a.post_content,
 	        b.comm_id,
 	        b.comm_content,
 	        b.comm_date,
-	        b.stud_id
+	        b.stud_id commentName
         FROM
 	        post a
 	    LEFT JOIN
@@ -34,7 +35,7 @@
 	    ON
 	        a.post_id = b.post_id
         ORDER BY
-            post_id,comm_id desc
+            post_id desc,comm_id desc
     </select>
 
 </mapper>

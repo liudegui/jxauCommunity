@@ -15,7 +15,7 @@ public class CommentService {
 
     @Autowired
     ICommentDao commentDao;
-    public void comment(String commentText, HttpServletRequest request){
+    public void comment(String commentText,String postID, HttpServletRequest request){
         //获取是谁发布者&判断是个人账号还是集体账号
         String username = CookieUtil.getCookieValue(request, "username");
         //获取系统时间
@@ -28,7 +28,7 @@ public class CommentService {
         Integer pkCount=i+1;
         //封装为一个对象插入数据库
         Comment comment = new Comment();
-        comment.setPostID("1");
+        comment.setPostID(postID);
         comment.setStudID(username);
         comment.setCommID(pkCount.toString());
         comment.setCommContent(commentText);

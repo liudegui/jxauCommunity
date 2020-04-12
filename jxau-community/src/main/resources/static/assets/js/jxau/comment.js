@@ -1,5 +1,8 @@
-function comment() {
-    var comment = $(this).prev().val();
+function comment(obj) {
+    var temp = obj;
+
+    var comment = $(temp).prev().val();
+
     if (comment.length == 0) {
         alert("请输入你的评论...");
         return;
@@ -9,7 +12,8 @@ function comment() {
         url: "/comment",
         dataType: "json",
         data: {
-            comment: $(this).prev().val(),
+            comment: $(temp).prev().val(),
+            postID: $(temp).val()
         },
         success:function (messageModel) {
             if(messageModel.code==200){
@@ -19,6 +23,7 @@ function comment() {
                 // $.cookie("userId",result.userId);
                 //window.location.href="pulishPersonalDynamic";
                 alert(messageModel.msg);
+                location.reload();
             }else {
                 alert(messageModel.msg);
             }

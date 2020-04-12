@@ -17,8 +17,8 @@ public class CommentController {
 
     @ResponseBody
     @RequestMapping("/comment")
-    public Map<String, Object> comment(String comment,HttpServletRequest reques){
-        commentService.comment(comment,reques);
+    public Map<String, Object> comment(String comment,String postID,HttpServletRequest reques){
+        commentService.comment(comment,postID,reques);
         Map<String, Object> map = new HashMap<>();
         map.put("code", 200);
         map.put("msg", "成功");
