@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liudegui.dao.ILostDao">
+
+    <insert id="insertLost" parameterType="com.liudegui.entity.Lost">
+        insert into
+            lost(lost_id,lost_name,lost_type,lost_describe,lost_image,lost_contact,lost_addr,stud_id)
+        values
+        (
+            #{lostID},#{lostName},#{lostType},#{lostDesc},#{lostImage},#{lost},#{lostContact},#{lostAddr},#{studID}
+        )
+    </insert>
+    <select id="selLastNum" resultType="int">
+        select count(*) from lost
+    </select>
+
+</mapper>

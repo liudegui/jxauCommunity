@@ -8,58 +8,56 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="assets/js/bootstrap.min.js"></script>
-<!--    <script src="assets/js/jxau/submitInfo.js"/>-->
+    <script src="assets/js/jxau/submitInfo.js"></script>
 </head>
 <body>
 <div th:include="header :: header"></div>
 <div align="center">
-    <form class="form-inline">
+    <form id="lostInfo" class="form-inline">
         <table>
             <tr>
                 <td>
                     <div class="form-group">
-                        <label name="lostDesc">联系姓名</label>
-                        <input type="text" class="form-control" maxlength="6" placeholder="联系姓名">
+                        <label >联系姓名</label>
+                        <input id="studID" name="studID" type="text" class="form-control"  disabled maxlength="20" placeholder="Your Name">
                     </div>
                 </td>
                 <td>
                     <div class="form-group">
-                        <label name="lostType">丢失类别</label>
-                        <input name="lostName" type="text" class="form-control" placeholder="丢失类别" maxlength="2">
+                        <label>丢失类别</label>
+                        <input id="lostType" name="lostType" type="text" class="form-control"  required placeholder="丢失类别" maxlength="2">
                     </div>
                 </td>
                 <td>
                     <div class="form-group">
-                        <label name="lostThing">物品名称</label>
-                        <input name="lostName" type="text" class="form-control" placeholder="物品名称" maxlength="20">
+                        <label >物品名称</label>
+                        <input id="lostName" name="lostName" type="text" class="form-control"   required placeholder="物品名称" maxlength="20">
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="form-group">
-                        <label name="lostDesc">物品描述</label>
-                        <input name="lostDesc" type="text" class="form-control" maxlength="20" placeholder="物品描述">
+                        <label>物品描述</label>
+                        <input id="lostDesc" name="lostDesc" type="text" class="form-control" maxlength="20" placeholder="物品描述">
                     </div>
                 </td>
                 <td>
                     <div class="form-group">
-                        <label name="lostContact">联系方式</label>
-                        <input type="text" class="form-control" maxlength="20" placeholder="联系方式">
+                        <label>联系方式</label>
+                        <input id="lostContact" name="lostContact"type="text" class="form-control"  required maxlength="20" placeholder="联系方式">
                     </div>
                 </td>
                 <td>
                     <div class="form-group">
-                        <label name="lostAddr">物品地点</label>
-                        <input type="text" class="form-control" maxlength="20" placeholder="物品地点">
+                        <label>物品地点</label>
+                        <input id="lostAddr" name="lostAddr" type="text" class="form-control" maxlength="20" placeholder="物品地点">
                     </div>
-                </td>
-                <td rowspan="2" style="text-align: center">
-                    <button onsubmit="submitInfo()" class="btn btn-default">确定发布</button>
                 </td>
             </tr>
         </table>
     </form>
+        <div align="center"><button id="submitLost" onclick="submitLostInfo()" class="btn btn-primary">发布</button></div>
 </div>
 <hr id="line"/>
 <!--    展示数据-->
