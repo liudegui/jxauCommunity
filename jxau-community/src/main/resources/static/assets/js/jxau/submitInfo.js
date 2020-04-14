@@ -18,7 +18,7 @@ function submitLostInfo() {
                 var result = messageModel.result;
                 $.cookie("username", result.userName, {path: '/'});
                 //$.cookie("userId",result.userId);
-                window.location.href = "main";
+                window.location.href = "lost";
             } else {
                 alert(messageModel.msg);
             }

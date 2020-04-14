@@ -25,12 +25,6 @@ public class LostController {
 
     @RequestMapping(value = "/insertLost", method = RequestMethod.POST)
     public Map insertLost(HttpServletRequest request) {
-        /*String studID = CookieUtil.getCookieValue(request, "username");
-        String lostType = request.getParameter("lostType");
-        String lostName = request.getParameter("lostName");
-        String lostDesc = request.getParameter("lostDesc");
-        String lostContact = request.getParameter("lostContact");
-        String lostAddr = request.getParameter("lostAddr");*/
         //获取请求参数封装为Lost对象
         Lost lost = new Lost();
         lost.setStudID(CookieUtil.getCookieValue(request, "username"));
