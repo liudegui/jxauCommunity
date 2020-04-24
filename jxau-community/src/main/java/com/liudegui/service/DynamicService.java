@@ -20,8 +20,6 @@ public class DynamicService {
         //获取系统时间
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
         String localDate = df.format(new Date());
-        //获取个人动态信息
-
         //获取记录条数
         Integer i = dynamicDao.selCount();
         Integer pkCount=i+1;
@@ -31,8 +29,6 @@ public class DynamicService {
         post.setPostDate(localDate);
         post.setPostContent(content);
         post.setPostID(pkCount.toString());
-
         dynamicDao.insertPost(post);
-
     }
 }

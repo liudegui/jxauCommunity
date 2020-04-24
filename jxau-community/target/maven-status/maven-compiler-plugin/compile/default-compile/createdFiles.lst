@@ -1,11 +1,7 @@
-com\liudegui\controller\UpdatePassword.class
 com\liudegui\JxauCommunityApplication.class
 com\liudegui\dao\IUserDao.class
 com\liudegui\controller\UserController.class
 com\liudegui\entity\User.class
 com\liudegui\config\MvcConfig$1.class
-com\liudegui\mapper\UserMapper.class
-com\liudegui\controller\CampusImg.class
-com\liudegui\ServletInitializer.class
 com\liudegui\config\MvcConfig.class
 com\liudegui\service\UserService.class

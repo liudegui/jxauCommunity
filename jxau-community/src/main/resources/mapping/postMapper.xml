@@ -18,5 +18,6 @@
         select count(*) from post
     </select>
 
+    
 
 </mapper>

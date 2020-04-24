@@ -17,10 +17,9 @@ function submitLostInfo() {
             if (messageModel.code == 200) {
                 var result = messageModel.result;
                 $.cookie("username", result.userName, {path: '/'});
-                //$.cookie("userId",result.userId);
                 window.location.href = "lost";
             } else {
-                alert(messageModel.msg);
+                //alert(messageModel.msg);
             }
         }
     })
