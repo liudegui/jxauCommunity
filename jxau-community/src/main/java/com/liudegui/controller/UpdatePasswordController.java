@@ -4,7 +4,6 @@ import com.liudegui.base.Constant;
 import com.liudegui.base.exceptions.ParamsException;
 import com.liudegui.model.MessageModel;
 import com.liudegui.service.UpadatePwdService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
